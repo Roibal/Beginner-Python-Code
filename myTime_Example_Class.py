@@ -13,6 +13,10 @@ class myTime():
         minute = self.m + other.m
         second = self.s + other.s
         return myTime(hour, minute, second)
+        
+    def __lt__(self, other):
+        if self.h < other.h:
+            return True
     
 t = myTime(13, 5, 23)
 
