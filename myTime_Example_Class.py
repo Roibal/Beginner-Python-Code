@@ -8,6 +8,12 @@ class myTime():
     def __str__(self):
         return str(self.h) + ":" + str(self.m) + ":" + str(self.s)
         
+    def __add__(self, other):
+        hour = self.h + other.h
+        minute = self.m + other.m
+        second = self.s + other.s
+        return myTime(hour, minute, second)
+    
 t = myTime(13, 5, 23)
 
 print(t)
