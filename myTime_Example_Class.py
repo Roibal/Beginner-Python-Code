@@ -3,8 +3,10 @@ class myTime():
         self.h = hour
         self.m = minute
         self.s = second
+    
     def getTime(self):
         return (h, m, s)
+    
     def __str__(self):
         return str(self.h) + ":" + str(self.m) + ":" + str(self.s)
         
@@ -17,6 +19,10 @@ class myTime():
     def __lt__(self, other):
         if self.h < other.h:
             return True
+        elif self.h == other.h:
+            #Compare Minute
+        else:
+            return False
     
 t = myTime(13, 5, 23)
 
